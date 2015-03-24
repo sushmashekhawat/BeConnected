@@ -7,6 +7,7 @@
 //
 
 #import "RegisterVC.h"
+#import <Parse/Parse.h>
 
 @interface RegisterVC ()
 
@@ -54,6 +55,35 @@
 }
 
 - (IBAction)btnSubmitDetails:(UIButton *)sender {
+    
+//    PFUser *userInfo = [PFUser new];
+//    userInfo[@"user_id"] = [NSNumber numberWithInt:10];//number
+//    userInfo[@"firstname"] = @"Ashwin1";
+//    userInfo[@"lastname"] = @"Kanjariya1";
+//    userInfo.email = @"ashwin.kanjariya@indianic3.com";
+//    userInfo.username = @"ashwin.kanjariya@indianic3.com";
+//    userInfo.password = @"indianic1";
+//    userInfo[@"phoneNo"] = @"9722143957";
+//    userInfo[@"gender"] = @"Male";
+//    userInfo[@"status"] = @"Active";
+//    userInfo[@"birthdate"] = [NSDate date];
+//    NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"9.png"]);
+//    PFFile *imageFile = [PFFile fileWithName:@"img" data:imageData];
+//    userInfo[@"userimage"] = imageFile;
+////    if (myloaction) {
+////        PFGeoPoint *loc = [[PFGeoPoint alloc] init];
+////        loc.latitude= myloaction.coordinate.latitude;
+////        loc.longitude = myloaction.coordinate.longitude;
+////        userInfo[@"location"] = loc;
+////    }
+//    
+//    [userInfo signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+//        if (!succeeded) {
+//            NSLog(@"error %@",error);
+//        }
+//    }];
+//
+//    
     NSLog(@"%@\n%@\n%@\n%@\n%@\n%@\n",txtFirstName.text,txtLastName.text,txtEmailID.text,txtPassword.text,[segmentGender titleForSegmentAtIndex:segmentGender.selectedSegmentIndex],lblDOB.text);
 }
 @end

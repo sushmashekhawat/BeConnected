@@ -55,11 +55,23 @@
 */
 
 - (IBAction)btnLoginSuccessTapped:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"tabbarLoginSegue" sender:self];
+//    [self performSegueWithIdentifier:@"tabbarLoginSegue" sender:self];
+    [PFUser logInWithUsernameInBackground:txtUsername.text password:txtPassword.text block:^(PFUser *user, NSError *error) {
+        if (error) {
+            NSLog(@"%@",error);
+            //Show Alert With Message.
+            
+        }
+        else{
+            NSLog(@"%@",user);
+            [self performSegueWithIdentifier:@"tabbarLoginSegue" sender:self];
+        }
+        
+    }];
     
 }
 
-#pragma mark -
+#pragma mark 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"tabbarLoginSegue"]) {

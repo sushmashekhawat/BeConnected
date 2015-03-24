@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -19,6 +20,7 @@
     
 //    [[UINavigationBar appearance]setAlpha:0.0];
     // Override point for customization after application launch.
+     [Parse setApplicationId:@"qWdWjjbTneo83e9zkzTekKAUM7omLYajte4a34OG" clientKey:@"YH5bLoI2tAPSz1EDVEH34hA2s935iIFL1LAjge12"];
     return YES;
 }
 
